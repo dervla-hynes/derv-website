@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dervla's website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="main-nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" id="menu-burger">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div id="my-links">
+                <a href="#main-page">Home_</a>
+                <a href="#section-about">About_</a>
+                <a href="#section-portfolio">Portfolio_</a>
+                <a href="#section-contact">Contact_</a>
+            </div>
+        </nav> 
+        <header id="main-page">
+            <div class="flex-container">
+                <div class="myname">
+                    <h1 id="typed-message"></h1>
+                    <p><span id="console">console</span>.<span id="log">log</span>(<span id="hello">"Hello World"</span>);</p>
+                </div>
+                <div class="logo">
+                    <img id="pixel-me" src="./images/pixil-gif-drawing.gif" alt="An image of an 8-bit version of Dervla">
+                </div> 
+            </div>
+        </header>
+        <main>
+            <div class="about" id="section-about">
+                <h2>About me_</h2>
+                <div class="about-info">
+                    <p>A 23-year-old software developer with a creative spark, and a passion for coding and problem solving.</p>
+                    <div id="about-links">
+                        <p><a id="cv" href="CV - updated Oct19.pdf" download>Download my CV...</a></p>
+                        <p><a id="blog" href="https://medium.com/derv-cracking-the-code" target="blank" download>Read my blog</a></p>
+                    </div>
+                    <p>Hover on the mystery boxes below to see into my world...</p>
+                    <figure class="icon-cards mt-3">
+                        <div class="icon-cards__content">
+                            <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                                <div class="about-icon">
+                                    <img src="./images/question-box.png" alt="An image of an 8-bit question box" class="question-image">
+                                    <img src="./images/imperial.jpg" alt="A piture of my 'very hungry caterpillar' game" class="about-image">
+                                </div>
+                                <span class="h2">Education</span>
+                                <p>Studied Physics at Imperial College london.</p>
+                            </div>
+                            <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                                <div class="about-icon">
+                                    <img src="./images/question-box.png" alt="An image of an 8-bit question box" class="question-image">
+                                    <img src="./images/pwc.jpg" alt="PwC logo" class="about-image">
+                                </div>
+                                <span class="h2">Work Experience</span>
+                                <p>Worked as a Data Analyst at PwC in Banking & Capital Markets.</p>
+                            </div>
+                            <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                                <div class="about-icon">
+                                    <img src="./images/question-box.png" alt="An image of an 8-bit question box" class="question-image">
+                                    <img src="./images/drawing.jpg" alt="A drawing of Heisenberg from 'Breaking Bad'" class="about-image">
+                                </div>
+                                <span class="h2">Hobbies</span>
+                                <p>Love drawing, listening to music, singing and finding new food spots.</p>
+                            </div>
+                            <div class="icon-cards__item d-flex align-items-center justify-content-center">
+                                <div class="about-icon">
+                                    <img src="./images/question-box.png" alt="An image of an 8-bit question box" class="question-image">
+                                    <img src="./images/travel.jpg" alt="A piture of me teaching in South Korea" class="about-image">
+                                </div>
+                                <span class="h2">Travel</span>
+                                <p>Have worked at Disney World and as a teacher in South Korea.</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <div id="nology">
+                        <h2>Why did I start the _nology programme?</h2>
+                        <!-- <img src="./images/speech.png" alt="speech bubble"> -->
+                        <p>I want to work in a <span id="console">technical field</span>,  where I can use <span id="log">creativity</span> and <span id="hello">logic</span> together to solve business problems.
+                            
+                            I want to learn <span id="console">core coding principles</span> and <span id="log">best practice</span> so that I can become a better developer. This course also gives 
+                            us a great opportunity to <span id="hello">work together</span> and support each other on our journey.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio" id="section-portfolio">
+                <h2>Portfolio_</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h3>Hungry caterpillar game</h3>
+                        <div class="project-icon">
+                            <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                            <img src="./images/snake-game.png" alt="A piture of my 'very hungry caterpillar' game" class="project-image">
+                        </div>
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4 class="code">Code</h4>
+                                <h4 class="link">Link</h4>
+                                <a href="https://github.com/dervla-hynes/snake-game" target="blank"><i class="fa fa-code"></i></a>
+                                <a href="https://dervla-hynes.github.io/snake-game/" target="blank"><i class="fa fa-link"></i></a>
+                            </div>
+                            <h4>A snake-style game created in JavaScript.</h4>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Ghostbusters zapper challenge</h3>
+                        <div class="project-icon">
+                            <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                            <img src="./images/ghostbusters-project.png" alt="A piture of my 'ghostbusters' game" class="project-image">
+                        </div>
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4>Code</h4>
+                                <h4>Link</h4>
+                                <a href="https://github.com/dervla-hynes/ghostbusters-zapper" target="blank"><i class="fa fa-code"></i></a>
+                                <a href="https://dervla-hynes.github.io/ghostbusters-zapper/" target="blank"><i class="fa fa-link"></i></a>
+                            </div>
+                            <h4>A game demonstrating the use of classes in JavaScript.</h4>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Movie Database Project</h3>
+                        <div class="project-icon">
+                            <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                            <img src="./images/movie-projectCrop.png" alt="A piture of my movie database project" class="project-image">
+                        </div>
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4>Code</h4>
+                                <h4>Link</h4>
+                                <a href="https://github.com/dervla-hynes/movies-api-project" target="blank"><i class="fa fa-code"></i></a>
+                                <a href="https://dervla-hynes.github.io/movies-api-project/" target="blank"><i class="fa fa-link"></i></a>
+                            </div>
+                            <h4>A project to demonstrate using a movie API to fetch and display data.</h4>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>'VeggiMaps' Google maps API Project</h3>
+                        <div class="project-icon">
+                            <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                            <img src="./images/VeggiMapsCrop.png" alt="A piture of my google maps project" class="project-image">
+                        </div>
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4>Code</h4>
+                                <h4>Link</h4>
+                                <a href="https://github.com/dervla-hynes/maps-api-project" target="blank"><i class="fa fa-code"></i></a>
+                                <a href="https://dervla-hynes.github.io/maps-api-project/" target="blank"><i class="fa fa-link"></i></a>
+                            </div>
+                            <h4>Demonstration of using Google maps, VegGuide API and a geocoder API.</h4>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Contributed to open source project</h3>
+                        <div class="project-icon">
+                            <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                            <img src="./images/npm-code.png" alt="A piture of my google maps project" class="project-image">
+                        </div>
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4>Code</h4>
+                                <h4>npm</h4>
+                                <a href="https://github.com/nology-tech/angular-test-simplifier" target="blank"><i class="fa fa-code"></i></a>
+                                <a href="https://www.npmjs.com/package/@nology/angular-test-simplifier" target="blank"><i class="fa fa-link"></i></a>
+                            </div>
+                            <h4>Angular test simplifier: added some missing functionality in event trigger function.</h4>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h3>Future project title will go here</h3>
+                        <img src="./images/heart-purple.png" alt="An image of an 8-bit heart" class="heart-image">
+                        <div class="project-name">
+                            <div class="project-links">
+                                <h4>Code</h4>
+                                <h4>Link</h4>
+                                <i class="fa fa-code"></i>
+                                <i class="fa fa-link"></i>
+                            </div>
+                            <h4>Description goes here.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="contact" id="section-contact">
+            <div class="contact-text">
+                <h2>Contact_</h2>
+                <h3>Want to find out more?</h3>
+                <p>Please feel free to get in touch via email or LinkedIn, or check out my github and medium blog to follow my journey.</p>
+                <span class="social">
+                    <a href="mailto:dervla.hynes@nology.io">
+                        <i class=" fa fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dervla-hynes-769836bb"  target="_blank">
+                        <i class=" fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/dervla-hynes"  target="_blank">
+                        <i class=" fa fa-github-square"></i>
+                    </a>
+                    <a href="https://medium.com/derv-cracking-the-code"  target="_blank">
+                        <i class="fa fa-medium"></i>
+                    </a>
+                </span>
+            </div>
+            <img src="./images/thumbs-up.png" alt="An image of 8-bit Dervla with a thumbs up">
+        </div>
+        <footer>
+        <p>Created by Dervla Hynes</p>
+        </footer> 
+        <script src="sandbox.js" async defer></script>
+    </body>
+</html>

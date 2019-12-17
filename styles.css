@@ -1,0 +1,651 @@
+/* Colour variables */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+/* Main CSS code reset*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+}
+
+/* HTML styling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main nav styling */
+nav.main-nav {
+  background-color: #adbdff;
+}
+nav.main-nav a {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 0.8em;
+  display: block;
+}
+nav.main-nav a:hover {
+  color: #735cf9;
+}
+nav.main-nav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+nav.main-nav #my-links {
+  display: none;
+}
+
+/* styling the header*/
+header {
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+header h1 {
+  font-size: 2em;
+  padding: 20px 20px;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  font-weight: lighter;
+}
+header p {
+  font-size: 1em;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  padding: 20px 20px;
+}
+header span#console {
+  color: #735cf9;
+  font-family: "Press Start 2P", cursive;
+}
+header span#log {
+  color: #adbdff;
+  font-family: "Press Start 2P", cursive;
+}
+header span#hello {
+  color: #a25ad8;
+  font-family: "Press Start 2P", cursive;
+}
+
+div.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 100%;
+  padding-top: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Styling the about me section */
+div.about {
+  background-color: #735cf9;
+  padding: 200px 0px;
+}
+div.about h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+div.about-info {
+  display: flex;
+  flex-direction: column;
+}
+div.about-info p {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+div.about-info p a#cv {
+  color: #a25ad8;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px;
+  border: 2px solid white;
+}
+div.about-info p a#cv:hover {
+  color: #735cf9;
+  background-color: #adbdff;
+  border: 2px solid #adbdff;
+}
+div.about-info p a#blog {
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px 35px;
+  border: 2px solid white;
+}
+div.about-info p a#blog:hover {
+  color: #735cf9;
+  background-color: #adbdff;
+  border: 2px solid #adbdff;
+}
+div.about-info #about-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+div.about-info div#nology {
+  margin: 100px auto 0px auto;
+}
+div.about-info div#nology h2 {
+  font-size: 1em;
+}
+div.about-info div#nology p {
+  color: black;
+  font-size: 0.5em;
+  background-image: url(./images/speech.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  height: 300px;
+  padding: 80px 70px;
+}
+div.about-info div#nology p span#console {
+  color: #735cf9;
+  font-family: "Press Start 2P", cursive;
+}
+div.about-info div#nology p span#log {
+  color: #adbdff;
+  font-family: "Press Start 2P", cursive;
+}
+div.about-info div#nology p span#hello {
+  color: #a25ad8;
+  font-family: "Press Start 2P", cursive;
+}
+
+.about-icon {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.about-icon img {
+  opacity: 1;
+  display: block;
+  height: 300px;
+  width: 100px;
+  padding-top: 20px;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.about-icon img:hover {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.about-icon .question-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.about-icon .about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+  z-index: 0;
+}
+
+.question-image:hover ~ .about-image {
+  opacity: 1;
+}
+
+.icon-cards {
+  position: relative;
+  width: 60vw;
+  height: 70vw;
+  max-width: 400px;
+  max-height: 350px;
+  margin: 100px auto;
+  color: white;
+  perspective: 1000px;
+  transform-origin: center;
+}
+.icon-cards .h2 {
+  padding: 0px;
+  font-size: 1.5em;
+  text-align: center;
+}
+.icon-cards p {
+  font-size: 1em;
+}
+.icon-cards img {
+  height: 100px;
+}
+.icon-cards__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: translateZ(-50vw) rotateY(0);
+  animation: carousel 15s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__content.step-animation {
+  animation: carousel 15s infinite steps(1) forwards;
+}
+.icon-cards__item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 60vw;
+  height: 90vw;
+  max-width: 380px;
+  max-height: 350px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  transform-origin: center;
+}
+.icon-cards__item:nth-child(1) {
+  background: #adbdff;
+  transform: rotateY(0) translateZ(50vw);
+}
+.icon-cards__item:nth-child(2) {
+  background: #a25ad8;
+  transform: rotateY(90deg) translateZ(50vw);
+}
+.icon-cards__item:nth-child(3) {
+  background: #adbdff;
+  transform: rotateY(180deg) translateZ(50vw);
+}
+.icon-cards__item:nth-child(4) {
+  background: #a25ad8;
+  transform: rotateY(270deg) translateZ(50vw);
+}
+
+@keyframes carousel {
+  0%, 17.5% {
+    transform: translateZ(-50vw) rotateY(0);
+  }
+  27.5%, 37.5% {
+    transform: translateZ(-50vw) rotateY(-90deg);
+  }
+  47.5%, 57.5% {
+    transform: translateZ(-50vw) rotateY(-180deg);
+  }
+  67.5%, 77.5% {
+    transform: translateZ(-50vw) rotateY(-270deg);
+  }
+  87.5%, 100% {
+    transform: translateZ(-50vw) rotateY(-360deg);
+  }
+}
+/* Styling the portfolio section */
+div.portfolio {
+  margin: 200px 0px;
+}
+div.portfolio h2 {
+  font-size: 1.8em;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  padding: 50px 10px;
+}
+
+div.projects {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 30px;
+  grid-column-gap: 20px;
+  margin: 50px 50px;
+  justify-content: space-around;
+  align-content: center;
+}
+
+div.project {
+  padding: 50px;
+  width: 300px;
+  text-align: center;
+}
+div.project .project-icon {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+div.project .project-icon .heart-image {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+div.project .project-icon .project-image {
+  height: 200px;
+  width: 200px;
+}
+div.project h3 {
+  font-size: 30px;
+}
+div.project img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+div.project img:hover {
+  opacity: 0;
+  transform: scale(1.1);
+}
+div.project img.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+  z-index: 0;
+}
+div.project div.project-name div.project-links {
+  color: #735cf9;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+div.project div.project-name div.project-links h4 {
+  font-size: 20px;
+}
+div.project div.project-name div.project-links i {
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 50px;
+}
+div.project div.project-name div.project-links i:hover {
+  color: #735cf9;
+}
+
+.heart-image:hover ~ .project-image {
+  opacity: 1;
+}
+
+/* Styling the contact section */
+div.contact {
+  background-color: #adbdff;
+  padding: 0px 0px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+div.contact h2 {
+  color: white;
+  font-size: 2em;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin: 50px 0px;
+}
+div.contact h3 {
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 20px;
+}
+div.contact p {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+div.contact img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+div.contact span.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-top: 20px;
+}
+div.contact span.social i {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 10px;
+  color: white;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+div.contact span.social i:hover {
+  color: #735cf9;
+  transform: scale(1.1);
+}
+
+/* Styling the footer */
+footer {
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+footer p {
+  margin: 0px 20px;
+}
+
+/* Media query for ipad (above 550px) */
+@media only screen and (min-width: 550px) and (max-width: 769px) {
+  /* Header section */
+  div.flex-container {
+    flex-direction: row;
+    height: 600px;
+  }
+
+  div.logo {
+    margin-right: 100px;
+  }
+
+  /* About me section */
+  div.about-info p {
+    padding: 40px 0px;
+  }
+  div.about-info #about-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+  }
+  div.about-info div#nology h2 {
+    font-size: 1.2em;
+  }
+  div.about-info div#nology p {
+    height: 400px;
+    font-size: 0.8em;
+    padding: 80px 120px;
+    line-height: 1.5;
+  }
+
+  .about-icon img {
+    height: 200px;
+    width: 200px;
+  }
+
+  /* Portfolio section */
+  div.projects {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    margin: 20px 20px;
+    justify-content: space-around;
+    align-content: center;
+  }
+  div.projects h3 {
+    font-size: 2em;
+  }
+  div.projects h4 {
+    font-size: 1.5em;
+  }
+
+  div.project img {
+    width: 200px;
+  }
+
+  div.portfolio h2 {
+    font-size: 2em;
+  }
+
+  /* Contact section */
+  div.contact {
+    flex-direction: row-reverse;
+    padding: 200px 0px 0px 0px;
+  }
+  div.contact h2 {
+    margin: 0px;
+  }
+  div.contact img {
+    width: 100%;
+  }
+
+  span.social {
+    margin: 0px 0px;
+  }
+  span.social i {
+    font-size: 30px;
+  }
+}
+/* Media query for laptop and computer screens (above 769px) */
+@media only screen and (min-width: 769px) {
+  /* Main nav */
+  nav.main-nav {
+    background-color: black;
+  }
+  nav.main-nav #my-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  nav.main-nav #my-links:hover {
+    color: #adbdff;
+  }
+  nav.main-nav #menu-burger {
+    display: none;
+  }
+
+  /* Header section */
+  div.flex-container {
+    flex-direction: row;
+    height: 600px;
+  }
+
+  div.logo {
+    margin-right: 100px;
+  }
+
+  /* Main section */
+  header {
+    padding: 0px 0px;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header p {
+    font-size: 2em;
+    margin: 0px;
+  }
+
+  /* About section */
+  div.about-info p {
+    padding: 20px;
+  }
+  div.about-info #about-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  div.about-info .about-icon img {
+    height: 200px;
+    width: 200px;
+  }
+  div.about-info div#nology h2 {
+    font-size: 1.2em;
+  }
+  div.about-info div#nology p {
+    height: 500px;
+    font-size: 1.1em;
+    line-height: 1.7;
+    padding: 90px 140px;
+  }
+
+  .icon-cards img {
+    height: 200px;
+  }
+
+  /* Portfolio section */
+  div.projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    margin: 50px 50px;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  /* Contact section */
+  div.contact {
+    flex-direction: row-reverse;
+    padding: 250px 0px 0px 0px;
+  }
+  div.contact img {
+    width: 80%;
+  }
+
+  p {
+    margin: auto;
+  }
+
+  span.social a i.fa {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 940px) {
+  div.about-info div#nology p {
+    height: 700px;
+    font-size: 1.3em;
+    line-height: 1.7;
+    padding: 150px 200px;
+  }
+}
+@media only screen and (min-width: 1225px) {
+  div.about-info div#nology p {
+    height: 800px;
+    font-size: 1.5em;
+    line-height: 2;
+    padding: 180px 240px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
